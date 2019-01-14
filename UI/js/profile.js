@@ -1,4 +1,4 @@
-const baseUrl = 'http://127.0.0.1:5000/api/v2';
+const baseUrl = 'https://ireporter-v2.herokuapp.com/api/v2';
 
 const getAllIncidentsUrl = `${baseUrl}/incidents`;
 
@@ -101,6 +101,7 @@ const displayCard = (element) =>{
    document.getElementById('complaint-details').innerHTML = detail_text;
 }
 
+
 const populateProfile = () => {
     const user= JSON.parse(localStorage.getItem('user'));
 
@@ -161,6 +162,7 @@ const submitOnClicked = document.getElementById("submit").addEventListener('clic
 
     postEditedIncident(url, incident);
 });
+
 
 const deleteIncident = (url) => {
 

@@ -1,4 +1,4 @@
-const baseUrl = 'http://127.0.0.1:5000/';
+const baseUrl = 'https://ireporter-v2.herokuapp.com/';
 
 const signinUrl = `${baseUrl}api/v2/auth/login`;
 
@@ -30,7 +30,14 @@ const logIn = document.getElementById('btn').addEventListener('click', async(eve
         window.localStorage.setItem('user_token', data.body.token);
         window.localStorage.setItem('user', JSON.stringify(data.body.user));
 
-        window.location = 'home.html';
+        const isAdim = JSON.parse(localStorage.getItem('user')).isAdim;
+
+        if(isAdim === true){
+            window.location = 'admin_panel.html';
+        }
+        else{
+            window.location = 'home.html';
+        }
        }
        else{
            alert(data.body.message);

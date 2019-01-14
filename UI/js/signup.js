@@ -1,7 +1,6 @@
-const baseUrl = 'http://127.0.0.1:5000/';
+const baseUrl = 'https://ireporter-v2.herokuapp.com/';
 
 const signupUrl = `${baseUrl}api/v2/auth/signup`;
-
 
 
 

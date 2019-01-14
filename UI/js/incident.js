@@ -1,4 +1,4 @@
-const baseUrl = 'http://127.0.0.1:5000/api/v2';
+const baseUrl = 'https://ireporter-v2.herokuapp.com/api/v2';
 
 const createRedlagUrl = `${baseUrl}/redflags`;
 
@@ -19,10 +19,10 @@ const createIncident = document.getElementById('submitBtn').addEventListener('cl
         Images: ''
     }
 
-    if(incident_type == 'red-flag'){
+    if(incident_type === 'red-flag'){
         postIncident(createRedlagUrl, formData);
     }
-    else if(incident_type == 'intervention'){
+    else if(incident_type === 'intervention'){
         postIncident(createInterventionUrl, formData);
     }
     else{
@@ -44,12 +44,15 @@ const postIncident = (url, data) => {
         body: JSON.stringify(data)
       }
 
+      console.log('this',data);
+
     fetch(url, config)
       .then(response => response.json().then(res => ({status_code: response.status, body:res})
       ))
       .then(data => {
         if(data.status_code == 201){
             console.log(data.body.data);
+            window.location = 'user_profile.html';
         }
         else{
             alert(data.body.message);
