@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>User profile</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="UI/css/ireporter.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+       
+    </head>
+    <body>
+       <div class="main">
+          <div class="nav">
+            <div class="profile">
+                 <img src="UI/css/images/dummy.jpg">
+                 <span class="name" id="profile_fname" id="">Anonymous</span>
+                 <span class="name" id="profile_lname" id="">Anonymous</span><br>
+                 <span class="name" id="profile_username" id="">Anonymous</span>
+                 <div>
+                 </div>
+                 <span class="name" id="profile_email" id="">Email</span><br>
+                 <span class="name" id="profile_phone" id="">Phone number</span><br>
+
+                 <div>
+                 <a href="create_record.html" class="create">Create New</a>
+                 </div>
+            </div>
+          </div>
+          <div class="top">
+          <h1 style="color:white;">Profile</h1>
+          </div> 
+          <div class="content">
+                <div class="posts">
+                    <div class="tabs">
+                        <button id="flags">flags</button>
+                        <button id="interventions">Interventions</button>
+                    </div>
+                    <div  id="incident-card" >
+                     
+                    </div>
+                  
+                </div>
+                <div class="review" id="review">
+                <div id="complaint">
+                    <div class="complaint" >
+                        <div id="complaint-title">
+    
+                        </div>
+                        <div id="complaint-details">
+    
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <button class="edit" id="edit">Edit</button>
+                        <button class="reject" id="delete"> Delete</button>
+                    </div>
+                    </div>
+                  
+                  <div class="edit_form" id="edit_form">
+                    <form>
+                            <input  class="editor" style="height:60px;" id="location_input" placeholder="location"></input>
+                            <textarea  class="editor" placeholder="comment" id="comment_input" placeholder="comment"></textarea>
+                            <button class="edit" id="submit">Submit</button>
+                            <button class="reject" id="cancel">Cancel</button>
+                    </form>
+                  </div>
+
+                </div>
+            </div>
+       </div>
+        
+    <script src="UI/js/profile.js"></script> 
+    </body>
+</html>
